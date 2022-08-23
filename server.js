@@ -1,25 +1,14 @@
+
+
 // server.js
 var http = require('http'); // Import Node.js core module
-var GreensKiosk = require('./GreensKiosk.js');
+var GreensKiosk = require('./GreensKiosk');
 
-
-const host = 'localhost';
-const port = 8000;
-
-
-
-const server = http.createServer(function (req, res) {   // create web server
-
-  
-  
-  res.writeHead(200);
-  res.end('My server!');
-
-
+var server = http.createServer(function (req, res) {   // create web server
 
   // Set CORS headers
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8000');
-  res.setHeader('Access-Control-Request-Method', GET);
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Request-Method', '*');
   res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
   res.setHeader('Access-Control-Allow-Headers', '*');
   if (req.method === 'OPTIONS') {
@@ -28,7 +17,8 @@ const server = http.createServer(function (req, res) {   // create web server
     return;
   }
 
-  if (req.url == '/') { // check the URL of the current request
+  if (req.url == '/productsS') { 
+     // check the URL of the current request
     // set response header
     res.writeHead(200, { 'Content-Type': 'text/html' });
     // set response content
@@ -55,7 +45,6 @@ const server = http.createServer(function (req, res) {   // create web server
 
 });
 
-server.listen(port,host, () => {                    // listen for any incoming requests
+server.listen(5000); // listen for any incoming requests
 
-console.log ( `Node.js web server on http://${host}:${port}/products   ...`)
-});
+console.log('Node.js web server at port 5000 is running..')

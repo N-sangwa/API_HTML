@@ -1,5 +1,6 @@
 // GreensKiosk.js
 
+
 let products = [
     {
         name: 'Mangoes',
@@ -8,7 +9,8 @@ let products = [
     {
         name: 'Apples',
         category: 'fruits'
-    },
+    }
+    ,
     {
         name: 'Bananas',
         category: 'fruits'

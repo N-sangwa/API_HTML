@@ -1,0 +1,30 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Greens Kiosk</title>
+</head>
+<body>
+   <h1 id="title">Welcome to Greens Kiosk</h1>
+   <p>We sell fruits and vegetables</p>
+   <h2>Products</h2>
+   <ul id="products">
+       <!-- Show products list from API -->
+   </ul>
+   <h3 onclick=" getData('products/fruits') " >Fruits</h3>
+   <ul id="products/fruits">
+    
+       <!-- Show fruits from API -->
+   </ul>
+   <h3 onclick=" getData('products/vegetables') " >Vegetables</h3>
+   <ul id="products/vegetables">
+       <!-- Show vegetables from API -->
+   </ul>
+   <script src="/kiosk.js"></script>
+</body>
+</html>
+
+<!-- Questions: 
+1. Show products from /products
+2. Show fruits from /products/fruits
+3. Show vegetables from /products/vegetables -->
